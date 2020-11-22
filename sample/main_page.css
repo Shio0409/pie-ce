@@ -1,0 +1,74 @@
+.head{
+    height: 80px;
+    background-color: burlywood;
+}
+
+.main{
+    text-align: center;
+    height: 1500px;
+    background-color: bisque;
+}
+    .main_tab{
+        padding-top: 30px;
+        margin: auto;
+        text-align: center;
+        width: 90%;
+        height: 150px;
+    }
+        .tab_container{
+            text-align: center;
+            height: 140px;
+            background-color: white;
+        }
+            .first_tab{
+                height: 50px;
+                background-color: ;
+            }
+
+            .second_tab{
+                height: 90px;
+            }
+
+    .pie{
+        padding-top: 30px;
+        margin: auto;
+        text-align: center;
+        width: 75%;
+        height: 80%;
+        background-color: white;
+    }
+        .pie_group{
+            text-align: center;
+            margin: auto;
+        }
+        .h2_pie{
+            margin: auto;
+            width: 95%;
+            height: 30px;
+            background-color: rgb(250, 232, 200);
+            font-size: ;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(65, 65, 65);
+        }
+        .populer_group{
+
+        }
+        .new_group{
+
+        }
+        .latest_group{
+
+        }
+            .pie_container{
+
+            }
+                .pie_image{
+                    width: 16%;
+                    height: auto;
+                    margin: 3px 15px;
+                }
+.foot{
+    text-align: center;
+    height: 200px;
+    background-color: cornsilk;
+}
