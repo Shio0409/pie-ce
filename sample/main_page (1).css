@@ -1,0 +1,428 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    /* プロジェクトによって変動 */
+    min-width: 1000px;
+    color: #000;
+    line-height: 1.6;
+    font-weight: 400;
+    font-family: 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'YuGothic', '游ゴシック', 'メイリオ', Meiryo, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+
+    width: 100%;
+    font-smoothing: antialiased;
+    font-variant-numeric: tabular-nums;
+    /* safari hover対策 */
+    -webkit-font-smoothing: antialiased;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+ul, ol {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    vertical-align:baseline;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+img {
+    vertical-align: bottom;
+    line-height: 1.0;
+}
+
+button {
+    line-height: 1.0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+}
+
+
+/*
+ * add frame
+ */
+    div{border: 1px; opacity: 1;}
+/*
+ *    main CSS
+ */
+
+.head{
+    height: 80px;
+    background-color: rgb(239, 206, 162);
+}
+    .head_left{
+        height: 80px;
+        text-align: center;
+        vertical-align: center;
+        float: left;
+    }
+        .pie-ce_logo{
+            display: inline-block;
+            height: 80px;
+        }
+            .logo_txt{
+                color: seashell;
+                text-shadow:
+                2px 0 0 black,
+                0 2px 0 black,
+                -2px 0 0 black,
+                0 -2px 0 black
+            }
+        .comment{
+            display: inline-block;
+        }
+    .head_right{
+        float: right;
+        height: 100%;
+        width: auto;
+    }
+        .finder{
+            margin: 4px 8px;
+            display: inline-block;
+            width: 160px;
+        }
+        #form2{
+            position:relative;
+            max-width:300px;
+            margin-bottom:20px;
+            }
+            #sbox2{
+            height:28px;
+            padding:0 10px;
+            position:absolute;
+            left:0;
+            top:0;
+            border-radius:4px;
+            outline:0;
+            background:#eee;
+            }
+            #sbtn2{
+            height:30px;
+            position:absolute;
+            left:140px;/*アイコン左右の位置調整*/
+            top:0;
+            background:none;
+            color:#666;
+            border:none;
+            font-size:20px;/*アイコンサイズ*/
+            }
+            #sbtn5:hover{
+            color:#7fbfff;
+        }
+        .usr_info_container{
+            height: 80px;
+            text-align: center;
+            display: inline-block;
+            margin:0 4px;
+        }
+            .usr_icon{
+                border: 4px solid #777777;
+                border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+                width:  48px;       /* ※縦横を同値に */
+                height: 48px;       /* ※縦横を同値に */
+            }
+            .usr_name_container{
+
+            }
+                .usr_name{
+                    font-size: 14px;
+                    font-weight: bolder;
+                    color: rgb(65, 65, 65);
+                }
+        .menu_btn_container{
+            height: auto;
+            display: inline-block;
+            margin: 4px;
+        }
+        #nav-drawer {
+            margin: 8px 4px;
+            position: relative;
+            display: inline-block;
+        }
+        /*チェックボックス等は非表示に*/
+        .nav-unshown {
+            display:none;
+        }
+        /*アイコンのスペース*/
+        #nav-open {
+            display: block;
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+        }
+        /*ハンバーガーの形をCSSで表現*/
+        #nav-open span, #nav-open span:before, #nav-open span:after {
+            position: absolute;
+            height: 3px;/*線の太さ*/
+            width: 25px;/*長さ*/
+            border-radius: 3px;
+            background: #555;
+            display: block;
+            content: '';
+            cursor: pointer;
+        }
+        #nav-open span:before {
+            bottom: -8px;
+        }
+        #nav-open span:after {
+            bottom: -16px;
+        }
+        /*閉じる用の薄黒箇所*/
+        #nav-close {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            opacity: 0;
+            transition: .3s ease-in-out;
+        }
+        /*メニューの中身*/
+        #nav-content {
+            overflow: auto;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 100;
+            width: 90%;
+            max-width: 400px;
+            height: 100%;
+            background: #fff;
+            transition: .3s ease-in-out;
+            -webkit-transform: translateX(105%);
+            transform: translateX(105%);
+        }
+        /*チェックがついたら表示させる*/
+        #nav-input:checked ~ #nav-close {
+            display: block;
+            opacity: .5;
+        }
+        #nav-input:checked ~ #nav-content {
+            -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+            box-shadow: 6px 0 25px rgba(0,0,0,.15);
+        }
+        .header-logo-menu{
+            display: inline-block;
+            display: -moz-flex;
+            display: -o-flex;
+            display: -webkit-flex;
+            display: -ms-flex;
+            flex-direction: row;
+            -moz-flex-direction: row;
+            -o-flex-direction: row;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+        }
+
+
+
+
+.main{
+    text-align: center;
+    height: auto;
+    background-color: bisque;
+}
+    .main_tab{
+        padding-top: 30px;
+        margin: auto;
+        text-align: center;
+        width: 90%;
+        height: 150px;
+    }
+        .tab_container{
+            text-align: center;
+            height: 120px;
+            background-color: white;
+        }
+            .first_tab_container{
+                height: 80px;
+            }
+                .first_tab{
+                    display: inline-block;
+                    border: solid 2px #777777;
+                    height: 100%;
+                    width: 20%;
+                    margin: 0% 2%;
+                }
+            .filter_container{
+                margin-top: 8px;
+                height: 10px;
+                float: right;
+            }
+                .filter{
+                    margin: 0 60px;
+                    width: 120px;
+                    height:30px;
+                    background-color: #aaaaaa;
+                    border-radius: 12px;
+                }
+                .filter_icon{
+                    margin: 3px 0 0 0;
+                    display: inline-block;
+                    color:white;
+                    font-size: 1.6em;
+                }
+                .filter_txt{
+                    display: inline-block;
+                    color:white;
+                    font-size: medium;
+                    font-weight: bolder;
+                }
+
+    .pie_group_container{
+        padding-top: 30px;
+        margin: auto;
+        text-align: center;
+        width: 75%;
+        height: auto;
+        background-color: white;
+    }
+        .pie_group{
+            text-align: center;
+            margin: auto;
+        }
+        .h2_pie{
+            margin: auto;
+            width: 95%;
+            height: 40px;
+            background-color: rgb(250, 232, 200);
+            font-size: 24px;
+            color: black;
+        }
+        .populer_group{
+
+        }
+        .new_group{
+
+        }
+        .latest_group{
+
+        }
+            .pie_family_container{
+                width: 100%;
+                text-align: center;
+                margin: auto;
+            }
+                .pie_family{
+                    height: auto;
+                    width: 16%;
+                    display: inline-block;
+                    margin: 20px;
+                    background-color: white;
+                }
+                    .pie_icon_container{
+                        position: relative;
+                        width: 80%;
+                        height: auto;
+                        margin: 0px 16px;
+                    }
+                        .pie_frame{
+                            position: absolute;
+                            width: 100%;
+                            z-index: 10;
+                        }
+                        .pie_icon{
+                            position: relative;
+                            margin: 0 0 0 -2px;
+                            border-radius: 50%;
+                            width: 100%;
+                            z-index: 5;
+                        }
+.foot{
+    text-align: center;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+}
