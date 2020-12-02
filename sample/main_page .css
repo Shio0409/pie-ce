@@ -339,9 +339,9 @@ button {
                     }
                 .ff_container{
                     padding: 16px;
-                    height: 60px;
+                    height: 48px;
                     display: inline-block;
-                    width: 98%;
+                    width: 92%;
                 }
                     .follow_container{
                         float: left;
@@ -371,7 +371,7 @@ button {
                             }
                             .ff_num{
                                 display: inline;
-                                font-size: 28px;
+                                font-size: 24px;
                             }
             .side_menu_tab{
                 background-color: whitesmoke;
@@ -383,7 +383,10 @@ button {
                     font-size: 32px;
                     color: rgb(65, 65, 65);
                 }
-
+            .side_menu_tab:hover{
+                transition: 1s;
+                background-color: rgb(208, 208, 208);
+            }
 
 
 
