@@ -128,10 +128,6 @@ button {
 
 
 /*
- * add frame
- */
-    div{border: 1px; opacity: 1;}
-/*
  *    main CSS
  */
 
@@ -163,7 +159,7 @@ button {
     .head_right{
         float: right;
         height: 100%;
-        width: auto;
+        width:auto;
     }
         .finder{
             margin: 4px 8px;
@@ -198,11 +194,23 @@ button {
             #sbtn5:hover{
             color:#7fbfff;
         }
+        .bell{
+            width:auto;
+            height:auto;
+            margin: 4px;
+            display: inline-block;
+
+        }
+            .fa-bell{
+                color: gray;
+                font-size: 32px;
+            }
         .usr_info_container{
             height: 80px;
             text-align: center;
             display: inline-block;
             margin:0 4px;
+            width: auto;
         }
             .usr_icon{
                 border: 4px solid #777777;
@@ -211,7 +219,7 @@ button {
                 height: 48px;       /* ※縦横を同値に */
             }
             .usr_name_container{
-
+                width: auto;
             }
                 .usr_name{
                     font-size: 14px;
@@ -230,31 +238,32 @@ button {
         }
         /*チェックボックス等は非表示に*/
         .nav-unshown {
-            display:none;
+        display: none;
         }
         /*アイコンのスペース*/
         #nav-open {
             display: block;
-            width: 24px;
-            height: 24px;
+            width: 48px;
+            height: 48px;
+            cursor: pointer;
             vertical-align: middle;
         }
         /*ハンバーガーの形をCSSで表現*/
         #nav-open span, #nav-open span:before, #nav-open span:after {
             position: absolute;
-            height: 3px;/*線の太さ*/
-            width: 25px;/*長さ*/
+            height: 6px;/*線の太さ*/
+            width: 50px;/*長さ*/
             border-radius: 3px;
             background: #555;
             display: block;
             content: '';
-            cursor: pointer;
+            margin: 0.5px;
         }
         #nav-open span:before {
-            bottom: -8px;
+            bottom: -16px;
         }
         #nav-open span:after {
-            bottom: -16px;
+            bottom: -32px;
         }
         /*閉じる用の薄黒箇所*/
         #nav-close {
@@ -294,6 +303,9 @@ button {
             transform: translateX(0%);
             box-shadow: 6px 0 25px rgba(0,0,0,.15);
         }
+        #nav-input{
+            height: 48px;
+        }
         .header-logo-menu{
             display: inline-block;
             display: -moz-flex;
@@ -306,6 +318,71 @@ button {
             -webkit-flex-direction: row;
             -ms-flex-direction: row;
         }
+            .side_menu_usr_info{
+                text-align: center;
+            }
+                .icon_container{
+                    display: block;
+                }
+                    .side_menu_usr_icon{
+                        margin: 20px 0;
+                        width: 128px;
+                        height: auto;
+                        border-radius: 50%;
+                    }
+                .side_menu_usr_name_container{
+                    height: 40px;
+                }
+                    .side_menu_usr_name{
+                        font-size: 28px;
+                        font-weight: bolder;
+                    }
+                .ff_container{
+                    padding: 16px;
+                    height: 60px;
+                    display: inline-block;
+                    width: 98%;
+                }
+                    .follow_container{
+                        float: left;
+                        display: inline;
+                        width: 46%;
+                        padding: 0 2px;
+                    }
+                    .follower_container{
+                        float: right;
+                        display: inline;
+                        width: 46%;
+                        padding: 0 2px;
+                    }
+                        .ff_txt_container_left{
+                            margin-right: 30%;
+                        }
+                        .ff_txt_container_right{
+                            margin-left: 30%;
+                        }
+                            .follow_txt{
+                                display: inline;
+                                font-size: 20px;
+                            }
+                            .follower_txt{
+                                display: inline;
+                                font-size: 20px;
+                            }
+                            .ff_num{
+                                display: inline;
+                                font-size: 28px;
+                            }
+            .side_menu_tab{
+                background-color: whitesmoke;
+                height: 12%;
+                margin: 2%;
+                vertical-align: middle;
+            }
+                .side_menu_tab_txt{
+                    font-size: 32px;
+                    color: rgb(65, 65, 65);
+                }
 
 
 
@@ -314,24 +391,25 @@ button {
     text-align: center;
     height: auto;
     background-color: bisque;
+    text-align: center;
 }
     .main_tab{
         padding-top: 30px;
-        margin: auto;
+        margin: 0;
         text-align: center;
         width: 90%;
-        height: 150px;
+        height: 120px;
     }
         .tab_container{
+            margin: auto;
             text-align: center;
-            height: 120px;
-            background-color: white;
+            height: 80px;
         }
             .first_tab_container{
                 height: 80px;
             }
                 .nav {
-                    position: absolute;
+                    position: relative;
                     width: 900px;
                     height: 60px;
                     margin:  auto;
@@ -344,13 +422,13 @@ button {
                 }
                 .nav li a {
                     display: block;
-                    width: 200px;
+                    width: 250px;
                     height: 60px;
                     text-align: center;
                     color: #fff;
                     font-size: 14px;
                     line-height: 2.8;
-                    background: #9fb7d4;
+                    background: #f55c6e;
                     transition: 0.5s;
                     text-decoration: none;
                     border-right: 1px solid #eee;
@@ -358,16 +436,19 @@ button {
                 }
                 .nav > li:hover > a {/*layer-1*/
                     color: orange;
-                    background: #afc6e2;
+                    background: #ff9999;
                 }
                 .nav > li li:hover > a {/*layer-2*/
                     color: olive;
-                    background: #afc6e2;
+                    background: #e7fcc2;
                 }
                 .nav li ul {
-                    top: 40px;
-                    left: -40px;
+                    top: 60px;
                     position: absolute;
+                }
+                .nav li:hover > ul > li {
+                    overflow: visible;
+                    height: 60px;
                 }
                 .nav li ul li {
                     overflow: hidden;
@@ -377,63 +458,13 @@ button {
                 .nav li ul li a {
                     border-top: 1px solid #eee;
                 }
-                .nav li:hover > ul > li {
-                    overflow: visible;
-                    height: 40px;
-                }
-                .nav li ul li ul {
-                    top: 0;
-                    left: 110px;
-                }
-                .nav li ul li ul:before {/*layer-2▷*/
-                    position: absolute;
-                    content: "";
-                    top: 15px;
-                    left: 30px;
-                    border: 5px solid transparent;
-                    border-left: 5px solid #fff;
-                }
-                .nav li ul li ul li:hover > a {/*layer-3*/
-                    color: pink;
-                    background: #afc6e2;
-                }
-                .nav li ul li ul.left {
-                    top: 0;
-                    left: -190px;
-                }
-                .nav li ul li ul.left:before,/*layer-2-left▷*/
-                .nav li ul li ul li ul.left:before {/*layer-3-left▷*/
-                    position: absolute;
-                    content: "";
-                    top: 15px;
-                    left: 190px;
-                    border: 5px solid transparent;
-                    border-right: 5px solid #fff;
-                }
-                .nav li ul li ul.left li:hover > a {/*layer-2-left*/
-                    color: pink;
-                    background: #afc6e2;
-                }
-                .nav li ul li ul li ul.left li:hover > a {/*layer-3-left*/
-                    color: purple;
-                    background: #afc6e2;
-                }
-                .content {
-                    width: 750px;
-                    height: 200px;
-                    background: #eee;
-                    margin: 0 auto;
-                    padding: 10px;
-                    text-align: left;
-                    box-sizing: border-box;
-                }
+
             .filter_container{
-                margin-top: 8px;
+                margin: -16px;
                 height: 10px;
                 float: right;
             }
                 .filter{
-                    margin: 0 60px;
                     width: 120px;
                     height:30px;
                     background-color: #aaaaaa;
