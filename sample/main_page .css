@@ -284,7 +284,7 @@ button {
             position: fixed;
             top: 0;
             right: 0;
-            z-index: 100;
+            z-index: 300;
             width: 90%;
             max-width: 400px;
             height: 100%;
@@ -358,8 +358,18 @@ button {
                         .ff_txt_container_left{
                             margin-right: 30%;
                         }
+                        .ff_txt_container_left:hover{
+                            transition: 0.5s;
+                            background-color: rgb(208,208,208);
+                            border-radius: 4px;
+                        }
                         .ff_txt_container_right{
                             margin-left: 30%;
+                        }
+                        .ff_txt_container_right:hover{
+                            transition: 0.5s;
+                            background-color: rgb(208,208,208);
+                            border-radius: 4px;
                         }
                             .follow_txt{
                                 display: inline;
@@ -473,18 +483,37 @@ button {
                     background-color: #aaaaaa;
                     border-radius: 12px;
                 }
-                .filter_icon{
-                    margin: 3px 0 0 0;
-                    display: inline-block;
-                    color:white;
-                    font-size: 1.6em;
+                .filter:hover{
+                    transition: 0.5s;
+                    background-color: slategray;
                 }
-                .filter_txt{
-                    display: inline-block;
-                    color:white;
-                    font-size: medium;
-                    font-weight: bolder;
-                }
+                    .filter_checkbox{
+                        display: none;
+                    }
+                    .filter_icon{
+                        margin: 3px 0 0 0;
+                        display: inline-block;
+                        color:white;
+                        font-size: 1.6em;
+                    }
+                    .filter_txt{
+                        display: inline-block;
+                        color:white;
+                        font-size: medium;
+                        font-weight: bolder;
+                    }
+                    #filter_content{
+                        position: relative;
+                        margin: 0 0 0 -100px;
+                        height: 400px;
+                        width: 300px;
+                        background-color: seashell;
+                        z-index: 200;
+                        border-radius: 10px;
+                    }
+                    .filter_checkbox:checked ~ #filter_content{
+                        display: block;
+                    }
 
     .pie_group_container{
         padding-top: 30px;
