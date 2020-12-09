@@ -487,9 +487,6 @@ button {
                     transition: 0.5s;
                     background-color: slategray;
                 }
-                    .filter_checkbox{
-                        display: none;
-                    }
                     .filter_icon{
                         margin: 3px 0 0 0;
                         display: inline-block;
@@ -503,6 +500,7 @@ button {
                         font-weight: bolder;
                     }
                     #filter_content{
+                        display: none;
                         position: relative;
                         margin: 0 0 0 -100px;
                         height: 400px;
@@ -511,8 +509,11 @@ button {
                         z-index: 200;
                         border-radius: 10px;
                     }
-                    .filter_checkbox:checked ~ #filter_content{
+                    .filter_hover:hover ~ #filter_content{
                         display: block;
+                    }
+                    #filter_content:hover{
+                        display:block;
                     }
 
     .pie_group_container{

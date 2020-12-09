@@ -6,10 +6,10 @@ export class ServerAPI {
             (request: http.IncomingMessage, response: http.ServerResponse) =>
             this.requestHandler(request, response)
         );
-        server.listen("5000");
+        server.listen("8000");
 
         // ログを出力する
-        console.log("http://localhost:5000 へアクセスください");
+        console.log("http://localhost:8000 へアクセスしてください");
     }
 
     /*
