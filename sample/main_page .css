@@ -445,7 +445,7 @@ button {
                     box-sizing: border-box;
                 }
                 .nav > li:hover > a {/*layer-1*/
-                    color: orange;
+                    color: rgb(255, 208, 120);
                     background: #ff9999;
                 }
                 .nav > li li:hover > a {/*layer-2*/
