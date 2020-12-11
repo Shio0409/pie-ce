@@ -463,6 +463,7 @@ button {
 .main{
     text-align: center;
     height: auto;
+    padding-bottom: 60px;
     background-color: bisque;
     text-align: center;
 }
@@ -474,7 +475,7 @@ button {
         height: 120px;
     }
         .tab_container{
-            margin: auto;
+            margin: 0 5%;
             text-align: center;
             height: 80px;
         }
