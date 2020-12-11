@@ -403,17 +403,13 @@ button {
 /*
  * WELCOME BOARD
  */
-.welcome_board_container{
-    width: 80%;
-    height: 80%;
-    position: fixed;
-    z-index: 500;
-    margin: 4% 16%;
-}
     .welcome_board{
+        width: 80%;
+        height: 80%;
+        position: fixed;
+        z-index: 100;
+        margin: 5% 10%;
         display: block;
-        width: 800px;
-        height: 600px;
         border-radius: 2rem;
         background-color: white;
         border: solid 0.2rem #666;
@@ -431,24 +427,21 @@ button {
         margin-right: 160px;
         margin-top: 40px;
     }
-    .welcome_board_btn:hover {
-        cursor: pinter;
-    }
     .welcome_board_btn:active {
         background: #aaa;
     }
     /* close button */
     .action-close {
-        position: relative;
-        margin-top: 2em;
+        z-index: 500;
+        position: fixed;
+        margin-top: 5%;
     }
-    .action-close .welcome_board_btn {
-        position: absolute;
-        right: 0;
-        top: -1em;
+    .welcome_board_btn {
+        position: fixed;
+        z-index: 501;
+        margin: 8% 0 0 85%;
     }
     .action-close .welcome_board_box {
-        margin-bottom: 2em;
         border: 2px solid #aaa;
     }
 
