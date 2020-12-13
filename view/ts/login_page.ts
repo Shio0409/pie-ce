@@ -11,7 +11,6 @@ export function login_page(request,response){
     var content = ejs.render(page_data,{
         css : css_data,
     });
-    response.setHeader("");
     response.writeHead(200,{"Content-Type":"text/html"});
     response.write(content);
     response.end();
