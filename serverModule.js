@@ -2,8 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ServerAPI = void 0;
 const http = require("http");
+//ts
 const main_page_1 = require("./view/ts/main_page");
 const other_page_1 = require("./view/ts/other_page");
+const login_page_1 = require("./view/ts/login_page");
 const not_found_1 = require("./view/ts/not_found");
 const url = require("url");
 class ServerAPI {
@@ -24,6 +26,9 @@ class ServerAPI {
                 break;
             case "/other":
                 other_page_1.other_page(request, response);
+                break;
+            case "/login_page":
+                login_page_1.login_page(request, response);
                 break;
             default:
                 not_found_1.not_found(request, response);

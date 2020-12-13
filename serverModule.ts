@@ -1,7 +1,11 @@
 import * as http from "http";
+
+//ts
 import { main_page } from "./view/ts/main_page";
 import { other_page } from "./view/ts/other_page";
+import { login_page } from "./view/ts/login_page";
 import { not_found } from "./view/ts/not_found";
+
 const url = require("url");
 
 export class ServerAPI {
@@ -27,11 +31,24 @@ export class ServerAPI {
 
         switch(url_parts.pathname){
             case "/":
-                main_page(request,response);
+                if(!url_parts.query.genre){
+                    main_page(request,response);
+                }else{
+                    var genre =url_parts.query.ganre;
+                    switch(genre){
+                        default:
+                            not_found(request,response);
+                            break;
+                    }
+                }
                 break;
 
             case "/other":
                 other_page(request,response);
+                break;
+
+            case "/login_page":
+                login_page(request,response);
                 break;
 
             default:
