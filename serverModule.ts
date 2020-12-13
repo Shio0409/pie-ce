@@ -17,7 +17,7 @@ export class ServerAPI {
         server.listen("8000");
 
         // ログを出力する
-        console.log("http://localhost:8000 へアクセスしてください");
+        console.log("http://localhost:8000");
     }
 
     /*
