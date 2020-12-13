@@ -2,9 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ServerAPI = void 0;
 const http = require("http");
-const ejs = require("ejs");
+const main_page_1 = require("./view/ts/main_page");
+const other_page_1 = require("./view/ts/other_page");
+const not_found_1 = require("./view/ts/not_found");
 const url = require("url");
-const fs = require("fs");
 class ServerAPI {
     initServer() {
         const server = http.createServer((request, response) => this.requestHandler(request, response));
@@ -19,16 +20,13 @@ class ServerAPI {
         var url_parts = url.parse(request.url, true);
         switch (url_parts.pathname) {
             case "/":
-                response.write("main_page");
-                response.end();
+                main_page_1.main_page(request, response);
                 break;
             case "/other":
-                response.write("other_page");
-                response.end();
+                other_page_1.other_page(request, response);
                 break;
             default:
-                response.writeHead(200, { "Content-Type": "text/plain" });
-                response.end("404 No page is here.");
+                not_found_1.not_found(request, response);
                 break;
         }
     }

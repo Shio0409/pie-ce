@@ -1,7 +1,8 @@
 import * as http from "http";
-const ejs = require("ejs");
+import { main_page } from "./view/ts/main_page";
+import { other_page } from "./view/ts/other_page";
+import { not_found } from "./view/ts/not_found";
 const url = require("url");
-const fs = require("fs");
 
 export class ServerAPI {
     public initServer(): void {
@@ -23,21 +24,18 @@ export class ServerAPI {
         response: http.ServerResponse
     ): void {
         var url_parts = url.parse(request.url , true);
-        
+
         switch(url_parts.pathname){
             case "/":
-                response.write("main_page");
-                response.end();
+                main_page(request,response);
                 break;
-            
+
             case "/other":
-                response.write("other_page");
-                response.end();
+                other_page(request,response);
                 break;
-            
+
             default:
-                response.writeHead(200,{"Content-Type":"text/plain"});
-                response.end("404 No page is here.");
+                not_found(request,response);
                 break;
         }
     }
