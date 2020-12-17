@@ -1,0 +1,268 @@
+.head{
+    height: 80px;
+    background-color: #BE8A62;
+}
+    .head_left{
+        height: 80px;
+        text-align: center;
+        vertical-align: center;
+        float: left;
+    }
+        .pie-ce_logo{
+            display: inline-block;
+            height: 80px;
+        }
+            .pie-ce_icon{
+                height: 80px;
+                width: auto;
+            }
+    .head_right{
+        float: right;
+        height: 100%;
+        width:auto;
+    }
+        .finder{
+            margin: 4px 8px;
+            padding-bottom:4px ;
+            display: inline-block;
+            width: 160px;
+        }
+        #form2{
+            position:relative;
+            max-width:300px;
+            margin-bottom:20px;
+            }
+            #sbox2{
+            height:28px;
+            padding:0 10px;
+            position:absolute;
+            left:0;
+            top:0;
+            border-radius:4px;
+            outline:0;
+            background:#eee;
+            }
+            #sbtn2{
+            height:30px;
+            position:absolute;
+            left:140px;/*アイコン左右の位置調整*/
+            top:0;
+            background:none;
+            color:#666;
+            border:none;
+            font-size:20px;/*アイコンサイズ*/
+            }
+            #sbtn5:hover{
+            color:#7fbfff;
+        }
+        .bell{
+            width:auto;
+            height:auto;
+            margin: 4px;
+            display: inline-block;
+            padding-bottom: 2px;
+        }
+            .fa-bell{
+                color: #aaa;
+                font-size: 32px;
+                text-shadow:
+                    0.5px 0 0 #ccc,
+                    0 0.5px 0 #ccc,
+                    -0.5px 0 0 #ccc,
+                    0 -0.5px #ccc
+            }
+
+        .usr_info_container{
+            height: 80px;
+            text-align: center;
+            display: inline-block;
+            margin:0 4px;
+            width: auto;
+        }
+            .usr_icon{
+                border: 4px solid #aaa;
+                border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+                width:  48px;       /* ※縦横を同値に */
+                height: 48px;       /* ※縦横を同値に */
+            }
+            .usr_name_container{
+                width: auto;
+            }
+                .usr_name{
+                    font-size: 14px;
+                    font-weight: bolder;
+                    color: white;
+
+                }
+        .menu_btn_container{
+            height: auto;
+            display: inline-block;
+            margin: 4px;
+        }
+        #nav-drawer {
+            margin: 8px 4px;
+            position: relative;
+            display: inline-block;
+        }
+        /*チェックボックス等は非表示に*/
+        .nav-unshown {
+        display: none;
+        }
+        /*アイコンのスペース*/
+        #nav-open {
+            display: block;
+            width: 48px;
+            height: 48px;
+            cursor: pointer;
+        }
+        /*ハンバーガーの形をCSSで表現*/
+        #nav-open span, #nav-open span:before, #nav-open span:after {
+            position: absolute;
+            height: 6px;/*線の太さ*/
+            width: 50px;/*長さ*/
+            border-radius: 3px;
+            border: solid 1px #aaa;
+            background: #888;
+            display: block;
+            content: '';
+            margin: 0.5px;
+        }
+        #nav-open span:before {
+            bottom: -16px;
+        }
+        #nav-open span:after {
+            bottom: -32px;
+        }
+        /*閉じる用の薄黒箇所*/
+        #nav-close {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            opacity: 0;
+            transition: .3s ease-in-out;
+        }
+        /*メニューの中身*/
+        #nav-content {
+            overflow: auto;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 300;
+            width: 90%;
+            max-width: 400px;
+            height: 100%;
+            background: #fff;
+            transition: .3s ease-in-out;
+            -webkit-transform: translateX(105%);
+            transform: translateX(105%);
+        }
+        /*チェックがついたら表示させる*/
+        #nav-input:checked ~ #nav-close {
+            display: block;
+            opacity: .5;
+        }
+        #nav-input:checked ~ #nav-content {
+            -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+            box-shadow: 6px 0 25px rgba(0,0,0,.15);
+        }
+        #nav-input{
+            height: 48px;
+        }
+        .header-logo-menu{
+            display: inline-block;
+            display: -moz-flex;
+            display: -o-flex;
+            display: -webkit-flex;
+            display: -ms-flex;
+            flex-direction: row;
+            -moz-flex-direction: row;
+            -o-flex-direction: row;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+        }
+            .side_menu_usr_info{
+                text-align: center;
+            }
+                .icon_container{
+                    display: block;
+                }
+                    .side_menu_usr_icon{
+                        margin: 20px 0;
+                        width: 128px;
+                        height: auto;
+                        border-radius: 50%;
+                        border: solid 3px #666;
+                    }
+                .side_menu_usr_name_container{
+                    height: 40px;
+                }
+                    .side_menu_usr_name{
+                        font-size: 28px;
+                        font-weight: bolder;
+                    }
+                .ff_container{
+                    padding: 16px;
+                    height: 48px;
+                    display: inline-block;
+                    width: 92%;
+                }
+                    .follow_container{
+                        float: left;
+                        display: inline;
+                        width: 46%;
+                        padding: 0 2px;
+                    }
+                    .follower_container{
+                        float: right;
+                        display: inline;
+                        width: 46%;
+                        padding: 0 2px;
+                    }
+                        .ff_txt_container_left{
+                            margin-right: 30%;
+                        }
+                        .ff_txt_container_left:hover{
+                            transition: 0.5s;
+                            background-color: rgb(208,208,208);
+                            border-radius: 4px;
+                        }
+                        .ff_txt_container_right{
+                            margin-left: 30%;
+                        }
+                        .ff_txt_container_right:hover{
+                            transition: 0.5s;
+                            background-color: rgb(208,208,208);
+                            border-radius: 4px;
+                        }
+                            .follow_txt{
+                                display: inline;
+                                font-size: 20px;
+                            }
+                            .follower_txt{
+                                display: inline;
+                                font-size: 20px;
+                            }
+                            .ff_num{
+                                display: inline;
+                                font-size: 24px;
+                            }
+            .side_menu_tab{
+                background-color: whitesmoke;
+                height: 12%;
+                margin: 2%;
+                vertical-align: middle;
+            }
+                .side_menu_tab_txt{
+                    font-size: 32px;
+                    color: rgb(65, 65, 65);
+                }
+            .side_menu_tab:hover{
+                transition: 1s;
+                background-color: rgb(208, 208, 208);
+            }
