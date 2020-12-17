@@ -26,12 +26,13 @@ export function login_page(request,response){
     response.write(html_head);
 
     var header = ejs.render(header_data,{});
-    response.write(header);
+    var footer = ejs.render(footer_data,{});
 
-    var content = ejs.render(page_data,{});
+    var content = ejs.render(page_data,{
+        header:header,
+        footer:footer,
+    });
     response.write(content);
 
-    var footer = ejs.render(footer_data,{});
-    response.write(footer);
     response.end();
 }
