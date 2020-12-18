@@ -1,0 +1,66 @@
+.separator{
+    width: 80%;
+    height: 10px;
+    margin: 1% 10%;
+    height:0px;
+    border-radius: 2px;
+    border: 2px solid hsl(0, 0%, 60%);
+}
+
+.footer{
+    width:100vw;
+    height: 40vh;
+    background-color: white;
+    text-align: center;
+}
+    .footer_list_container{
+        display: inline-block;
+        width: 80%;
+        height: 90%;
+        text-align: center;
+    }
+        .pie-ce_info{
+            display: inline-block;
+            width:40%;
+            height: auto;
+            background-color: #eee;
+        }
+            .footer_pie-ce_logo_container{
+                display: inline-block;
+                height: 24vh;
+                width: 100%;
+            }
+                .pie-ce_square_logo{
+                    width: 25vw;
+                    margin: 4%;
+                }
+            .pie-ce_description{
+                display: inline-block;
+                height: 16vh;
+                width: 100%;
+            }
+        .lists_container{
+            display: inline-block;
+            vertical-align: bottom;
+            height: 40vh;
+            width: 58%;
+        }
+            .support_list{
+                display: inline-block;
+                width: 48%;
+                height: auto;
+                background-color: #eee;
+            }
+            .link_list{
+                display:inline-block;
+                width: 48%;
+                height: auto;
+                background-color: #eee;
+            }
+                .footer_list_li{
+                    display: inline-block;
+                    height: 4vh;
+                    width: 80%;
+                    margin: 2vh;
+                    vertical-align: middle;
+                }
