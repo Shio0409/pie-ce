@@ -34,5 +34,5 @@ export function login_page(request,response){
     });
     response.write(content);
 
-    response.end();
+    response.end("</body></html>");
 }
