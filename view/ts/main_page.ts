@@ -5,7 +5,7 @@ const path = require("path");
 const html_head_data = fs.readFileSync(path.resolve(__dirname, "../ejs/html_head.ejs"),"utf-8");
 const reset_css_data = fs.readFileSync(path.resolve(__dirname, "../css/reset.css"),"utf-8");
 
-const header_data = fs.readFileSync(path.resolve(__dirname, "../ejs/partial/header_patial.ejs"),"utf-8");
+const header_data = fs.readFileSync(path.resolve(__dirname, "../ejs/partial/header_partial.ejs"),"utf-8");
 const header_css_data = fs.readFileSync(path.resolve(__dirname, "../css/header.css"),"utf-8");
 
 const page_data = fs.readFileSync(path.resolve(__dirname, "../ejs/main_page.ejs"),"utf-8");
@@ -16,7 +16,7 @@ const footer_css_data = fs.readFileSync(path.resolve(__dirname, "../css/footer.c
 
 const css_data = "<style>" + reset_css_data + header_css_data + main_page_css_data + footer_css_data + "</style>";
 
-export function login_page(request,response){
+export function main_page(request,response){
     response.writeHead(200,{"Content-Type":"text/html"});
 
     var html_head = ejs.render(html_head_data,{
@@ -25,14 +25,14 @@ export function login_page(request,response){
     });
     response.write(html_head);
 
-    var header = ejs.render(header_data,{});
-    var footer = ejs.render(footer_data,{});
+    var header_ren = ejs.render(header_data,{});
+    var footer_ren = ejs.render(footer_data,{});
 
     var content = ejs.render(page_data,{
-        header:header,
-        footer:footer,
+        header : header_ren,
+        footer : footer_ren,
     });
     response.write(content);
 
-    response.end("</body></html>");
+    response.end("");
 }
