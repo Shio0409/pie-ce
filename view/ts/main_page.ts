@@ -3,18 +3,23 @@ const ejs = require("ejs");
 const path = require("path");
 
 const html_head_data = fs.readFileSync(path.resolve(__dirname, "../ejs/html_head.ejs"),"utf-8");
-const reset_css_data = fs.readFileSync(path.resolve(__dirname, "../css/reset.css"),"utf-8");
-
 const header_data = fs.readFileSync(path.resolve(__dirname, "../ejs/partial/header_partial.ejs"),"utf-8");
-const header_css_data = fs.readFileSync(path.resolve(__dirname, "../css/header.css"),"utf-8");
-
 const page_data = fs.readFileSync(path.resolve(__dirname, "../ejs/main_page.ejs"),"utf-8");
-const main_page_css_data = fs.readFileSync(path.resolve(__dirname, "../css/main_page.css"),"utf-8");
-
 const footer_data = fs.readFileSync(path.resolve(__dirname, "../ejs/partial/footer.partial.ejs"),"utf-8");
-const footer_css_data = fs.readFileSync(path.resolve(__dirname, "../css/footer.css"),"utf-8");
 
-const css_data = "<style>" + reset_css_data + header_css_data + main_page_css_data + footer_css_data + "</style>";
+const css_paths = [
+    "./view/css/header.css",
+    "./view/css/main.css",
+    "./view/css/footer.css",
+]
+function change_path_to_tag(css_paths){
+    let data:string = "";
+    for(let i = 0; i < css_paths.length() ; i++){
+        data+= "<link rel=\"stylesheet\" href=\"" + css_paths[i] + "\">" ;
+    }
+    return data;
+}
+const css_data = change_path_to_tag(css_paths);
 
 export function main_page(request,response){
     response.writeHead(200,{"Content-Type":"text/html"});
