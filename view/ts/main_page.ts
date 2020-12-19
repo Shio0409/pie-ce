@@ -1,3 +1,5 @@
+import { change_path_to_tag } from "../../func";
+
 const fs = require("fs");
 const ejs = require("ejs");
 const path = require("path");
@@ -12,13 +14,6 @@ const css_paths = [
     "./view/css/main.css",
     "./view/css/footer.css",
 ]
-function change_path_to_tag(css_paths){
-    let data:string = "";
-    for(let i = 0; i < css_paths.length() ; i++){
-        data+= "<link rel=\"stylesheet\" href=\"" + css_paths[i] + "\">" ;
-    }
-    return data;
-}
 const css_data = change_path_to_tag(css_paths);
 
 export function main_page(request,response){
